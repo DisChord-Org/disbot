@@ -1,5 +1,5 @@
 {
-  "name": "dcbot",
+  "name": "disbot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DisChord-Org/disbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DisChord-Org/disbot/issues"
+  },
+  "homepage": "https://github.com/DisChord-Org/disbot#readme",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
 }

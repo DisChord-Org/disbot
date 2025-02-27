@@ -18,6 +18,10 @@
   "homepage": "https://github.com/DisChord-Org/disbot#readme",
   "description": "",
   "dependencies": {
+    "seyfert": "^2.2.0",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5"
   }
 }

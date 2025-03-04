@@ -8,8 +8,8 @@ export function BOT (ast: any) {
     if (!fs.existsSync(path.join(__dirname, '../../botdata/src/commands/'))) fs.mkdirSync(path.join(__dirname, '../../botdata/src/commands/'));
     if (!fs.existsSync(path.join(__dirname, '../../botdata/src/events/'))) fs.mkdirSync(path.join(__dirname, '../../botdata/src/events/'));
 
-    const packageName = require(path.join(process.cwd(), './package.json')).name || __dirname.split(path.sep).pop();
-    const baseDir = path.join('enviroment/dependencies', packageName)
+    const packageName = require(path.join(process.cwd(), './package.json')).name || __dirname.split('enviroment')[0].split(path.sep).pop();
+    const baseDir = path.join('enviroment/dependencies', packageName);
 
     const client = new Client({
         getRC(): any {

@@ -14,21 +14,18 @@ export default class Parser {
                     let botConfig: any = {};
 
                     if (this.tokens[this.current].type === 'L_EXPRESSION') {
-                        console.log('a', this.current)
                         botConfig = this.blocks('L_EXPRESSION', 'R_EXPRESSION');
-                        console.log('b', this.current)
-                        console.log('c', this.tokens[this.current], this.tokens)
                     }
 
-                    console.log('botconfig', botConfig);
-                    return {
+                    this.nodes.push({
                         consumeCount: 2,
                         ast: {
                             type: statements.BOT,
                             value: botToken,
                             config: botConfig
                         }
-                    }
+                    });
+                    break;
 
                 case 'L_EXPRESSION':
                     const expression: any = this.blocks('L_EXPRESSION', 'R_EXPRESSION');
@@ -53,6 +50,8 @@ export default class Parser {
                     this.nodes.push(this.consume(this.peek().type));
             }
         }
+
+        return this.nodes;
     }
 
     private peek() {

@@ -2,7 +2,7 @@ import { statements } from "../types";
 import { BOT } from "./Statements/BOT";
 
 export function Interpreter (ast: any): any {
-    // console.log(ast);
+    console.log('AST', ast);
 
     let current = 0;
     while (current < ast.length) {

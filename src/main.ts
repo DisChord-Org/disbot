@@ -3,7 +3,9 @@ import _Parser from './parser';
 import { Interpreter } from './Interpreter/interpreter';
 
 function Parser(tokens: any, current: any) {
-    return new _Parser(tokens, current).parse();
+    const parsedTokens = new _Parser(tokens, current).parse();
+
+    return Array.isArray(parsedTokens) ? parsedTokens[0] : parsedTokens;
 }
 
 export = {

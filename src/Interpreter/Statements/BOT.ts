@@ -11,7 +11,7 @@ export function BOT (ast: any) {
     const packageName = require(path.join(process.cwd(), './package.json')).name || __dirname.split('enviroment')[0].split(path.sep).pop();
     const baseDir = path.join('enviroment/dependencies', packageName);
 
-    console.log(ast)
+    console.log('onbotfile', ast)
 
     const client = new Client({
         getRC(): any {

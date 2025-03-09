@@ -36,7 +36,7 @@ export default class Parser {
                     this.nodes.push(this.parseObject());
                     break;
 
-                case "NUMERO ":
+                case "NUMERO":
                 case "BIGINT":
                 case "BOOL":
                 case "TEXTO":

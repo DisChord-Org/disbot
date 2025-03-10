@@ -41,7 +41,7 @@ export default class Parser {
                 case "BOOL":
                 case "TEXTO":
                 case "LISTA":
-                case "NULO" :
+                case "NULO":
                 case "INDEFINIDO":
                     this.nodes.push(this.consume(this.peek().type));
                     break;
